@@ -1,0 +1,10 @@
+.centrar-botones {
+    display: flex !important;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; 
+  }
+
+  form{
+    align-content: center;
+    display: inline-grid;
+  }

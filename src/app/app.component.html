@@ -411,7 +411,7 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
+    <span>{{ title }}</span>
 
     <svg
       id="rocket-smoke"
@@ -436,17 +436,18 @@
     <mat-card-header>
       <mat-card-title>DETECCION DE MUTANTES</mat-card-title>
     </mat-card-header>
-    <mat-card-actions>
+    <mat-card-actions class="centrar-botones">
       <form [formGroup]="myForm">
-      <textarea name="miTextarea"
-      formControlName="miTextarea">
+      <textarea style="width: 300px; height:100px;" name="miTextarea" formControlName="miTextarea">
       </textarea>
-      <button mat-button (click)="detectarmutante()">Detectar Mutantes</button>
+      <br>
+      <button mat-raised-button color="primary" class="button-guardar" (click)="detectarmutante()">Detectar Mutantes</button>
+
     </form>
     </mat-card-actions>
   </mat-card>
   <br />
-  <mat-card>
+  <mat-card *ngIf="ingresoavalidar">
     <div class="container">
       <h1>Resultado de la Deteccion</h1>
       <div *ngIf="mutante; else nomutante">
